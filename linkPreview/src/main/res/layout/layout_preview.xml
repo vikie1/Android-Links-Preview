@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/preview_layout"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frameLoading"
+            android:visibility="gone">
+            <com.sn.lib.NestedProgress
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loading"
+                app:innerAnimInterpolator="linear"
+                app:outerAnimInterpolator="overshoot"
+                android:layout_gravity="center"
+                app:outerLoaderAnimDuration="1500" />
+        </FrameLayout>
+        <ViewSwitcher
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:measureAllChildren="false"
+            android:id="@+id/img_iframe_switcher"
+            tools:ignore="WebViewLayout">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgViewImage"
+                android:adjustViewBounds="true"
+                android:importantForAccessibility="no" />
+            <WebView
+                android:layout_width="match_parent"
+                android:id="@+id/iframe_video_view"
+                android:layout_gravity="center"
+                android:layout_height="225dp" />
+        </ViewSwitcher>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/text_linear_layout"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewTitle"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"
+                tools:text="Some title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewSiteName"
+                android:layout_marginTop="5dp"
+                tools:text="www.somesite.com" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/txtViewDescription"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:labelFor="@id/imgViewImage"
+                android:textColor="@android:color/black"
+                tools:text="Some description"
+                android:text="@string/web_icon_obtained_from_link" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/txtViewMessage"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom"/>
+</LinearLayout>
