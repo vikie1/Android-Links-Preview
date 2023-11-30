@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.google.android.material.color.DynamicColors;
-
 import io.github.vikie1.linkpreview.Preview;
 
 public class MainActivity extends AppCompatActivity {
