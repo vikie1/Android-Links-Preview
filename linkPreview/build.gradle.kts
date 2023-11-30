@@ -27,9 +27,10 @@ android {
 }
 
 dependencies {
+    implementation("com.google.android.material:material:1.10.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.github.emreesen27:Android-Nested-Progress:v1.0.2")
-    implementation("org.jsoup:jsoup:1.16.1")
+    implementation("org.jsoup:jsoup:1.17.1")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 }
 
