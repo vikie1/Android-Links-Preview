@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:measureAllChildren="false"
             android:id="@+id/img_iframe_switcher"
+            android:layout_gravity="center"
             tools:ignore="WebViewLayout">
             <ImageView
                 android:layout_width="wrap_content"
@@ -79,7 +80,7 @@
                 android:layout_marginTop="5dp"
                 android:textSize="12sp"
                 android:labelFor="@id/imgViewImage"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/darker_gray"
                 tools:text="Some description"
                 android:text="@string/web_icon_obtained_from_link" />
         </LinearLayout>
@@ -91,4 +92,4 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:gravity="bottom"/>
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

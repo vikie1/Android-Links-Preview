@@ -24,7 +24,6 @@ import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 
 import org.jsoup.Jsoup;
@@ -383,9 +382,8 @@ public class Preview extends RelativeLayout {
                         runOnUiThread(() -> {
 //                            if (mLoadingDialog.isStart()) mLoadingDialog.stop();
                             mFrameLayout.setVisibility(GONE);
+                            mListener.onDataReady(Preview.this);
                         });
-
-                        mListener.onDataReady(Preview.this);
                     }
 
                     @Override
