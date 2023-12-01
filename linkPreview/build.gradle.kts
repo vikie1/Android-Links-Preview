@@ -1,6 +1,6 @@
 plugins {
     id("com.android.library")
-    `maven-publish`
+    id("maven-publish")
 }
 
 android {
@@ -37,9 +37,9 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication> ("release") {
-            groupId = "com.github.vikie1.linkpreview"
+            groupId = "io.github.vikie1.linkpreview"
             artifactId = "link-preview"
-            version = "1.0.0"
+            version = "1.0.1"
 
 //            afterEvaluate {
 //                from(components["release"])
