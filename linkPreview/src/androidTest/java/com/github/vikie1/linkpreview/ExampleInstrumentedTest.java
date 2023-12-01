@@ -1,4 +1,4 @@
-package io.github.vikie1.linkpreview;
+package com.github.vikie1.linkpreview;
 public class ExampleInstrumentedTest {
 
 }

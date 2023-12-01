@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.vikie1.linkpreview"
+    namespace = "com.github.vikie1.linkpreview"
     compileSdk = 34
 
     defaultConfig {
@@ -24,6 +24,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+
 }
 
 dependencies {
@@ -37,13 +44,13 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication> ("release") {
-            groupId = "io.github.vikie1.linkpreview"
+            groupId = "com.github.vikie1.linkpreview"
             artifactId = "link-preview"
-            version = "1.0.1"
+            version = "1.0.2"
 
-//            afterEvaluate {
-//                from(components["release"])
-//            }
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }

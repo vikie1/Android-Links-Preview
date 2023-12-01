@@ -1,4 +1,4 @@
-package io.github.vikie1.androidlinkpreview;
+package com.github.vikie1.androidlinkpreview;
 
 import org.junit.Test;
 

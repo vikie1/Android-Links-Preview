@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingVertical="20dp"
-    tools:context=".MainActivity">
+    tools:context="com.github.vikie1.androidlinkpreview.MainActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <io.github.vikie1.linkpreview.Preview
+            <com.github.vikie1.linkpreview.Preview
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/portrait_link_preview"
@@ -20,7 +20,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <io.github.vikie1.linkpreview.Preview
+            <com.github.vikie1.linkpreview.Preview
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/landscape_link_preview"
@@ -28,7 +28,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/portrait_link_preview"/>
 
-            <io.github.vikie1.linkpreview.Preview
+            <com.github.vikie1.linkpreview.Preview
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/youtube_link_preview"

@@ -1,4 +1,4 @@
-package io.github.vikie1.linkpreview;
+package com.github.vikie1.linkpreview;
 
 import android.content.Context;
 import android.graphics.Bitmap;

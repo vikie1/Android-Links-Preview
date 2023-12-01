@@ -1,10 +1,10 @@
-package io.github.vikie1.androidlinkpreview;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.github.vikie1.androidlinkpreview;
 
 import android.os.Bundle;
 
-import io.github.vikie1.linkpreview.Preview;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.vikie1.linkpreview.Preview;
 
 public class MainActivity extends AppCompatActivity {
 
