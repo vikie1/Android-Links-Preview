@@ -1,6 +1,6 @@
 # Android-Links-Preview
 ## Introduction
-This is a library meant for providing rich previews for links in an android application. The library uses the java and xml views ecosystem. It utilises material3 cards which means that the preview backgrounds changes depending on the system light or dark themes and is also compatible with adaptive theming from android 12 and above.
+This is a library meant for providing rich previews for links in an android application. The library uses the java and xml views ecosystem. It utilises material3 cards which means that the preview backgrounds changes depending on the system light or dark themes and is also compatible with adaptive theming from android 12 and above.  
 ![Dark theme screensot 1](images/1.png)
 ![Dark theme screenshot 2](images/2.png)
 ![Light theme screenshot 1](images/3.png)
