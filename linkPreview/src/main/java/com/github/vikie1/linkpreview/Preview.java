@@ -1,13 +1,16 @@
 package com.github.vikie1.linkpreview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -56,7 +59,6 @@ public class Preview extends RelativeLayout {
     private String mSiteName = null;
     private String mSite;
     private String mLink;
-//    private RotateLoading mLoadingDialog;
     private FrameLayout mFrameLayout;
     private PreviewListener mListener;
     private WebView iframePlayer;
@@ -79,12 +81,11 @@ public class Preview extends RelativeLayout {
 
     private void initialize(Context context) {
         mContext = context;
-        inflate(context, R.layout.layout_preview, this);
+        View view = inflate(context, R.layout.layout_preview, this);
         mImgViewImage = findViewById(R.id.imgViewImage);
         mTxtViewTitle = findViewById(R.id.txtViewTitle);
         mTxtViewDescription = findViewById(R.id.txtViewDescription);
         mTxtViewSiteName = findViewById(R.id.txtViewSiteName);
-//        mLoadingDialog = findViewById(R.id.rotateloading);
         mTxtViewMessage = findViewById(R.id.txtViewMessage);
         previewLayout = findViewById(R.id.preview_layout);
         mFrameLayout = findViewById(R.id.frameLoading);
@@ -92,6 +93,10 @@ public class Preview extends RelativeLayout {
         imgIframeSwitcher = findViewById(R.id.img_iframe_switcher);
         mFrameLayout.setVisibility(GONE);
         mHandler = new Handler(mContext.getMainLooper());
+        mListener = preview -> runOnUiThread(() -> view.setOnClickListener(v -> { // open android default link handler
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(preview.getLink()));
+            context.startActivity(browserIntent);
+        }));
     }
 
     public void setListener(PreviewListener listener)
@@ -309,7 +314,7 @@ public class Preview extends RelativeLayout {
                             linkElements = doc.select("link[rel=canonical]");
                             if (linkElements.size() > 0) {
                                 mLink = linkElements.get(0).attr("href");
-                            }
+                            } else mLink = url;
                         }
                         if (siteElements.size() > 0) {
                             mSiteName = siteElements.get(0).attr("content");
