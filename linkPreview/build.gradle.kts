@@ -46,7 +46,7 @@ publishing {
         register<MavenPublication> ("release") {
             groupId = "com.github.vikie1.linkpreview"
             artifactId = "link-preview"
-            version = "1.0.2"
+            version = "1.1.3"
 
             afterEvaluate {
                 from(components["release"])
