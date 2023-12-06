@@ -41,7 +41,7 @@ dependencies {
 }
 ```
 ## Instructions
-The library issimple to use by default. Add this to your layout file:
+The library is simple to use by default. Add this to your layout file:
 ```xml
 <com.github.vikie1.linkpreview.Preview
     android:layout_width="match_parent"
@@ -51,7 +51,7 @@ The library issimple to use by default. Add this to your layout file:
     ...
     />
 ```
-Then through sepcify the links programatically.
+Then specify the links programatically.
 ```java
 Preview linkPreview = findViewById(R.id.link_preview);
 linkPreview.setData("https://learnfromvictor.netlify.app/");
@@ -75,5 +75,4 @@ linkPreview.setOnClickListener(new PreviewListener{
 The library also uses youtube iframe API to play youtube videos in app. The auto play flag is set to off in the embedded youtube player. If for any reason the iframe isn't shown by the system webview, then the library defaults to the normal preview using youtube video cover photo.
 
 ### Credits
-This project is a moddified fork of <https://github.com/FreesoulApps/PreviewAndroid.git> project by [ View FreesoulApps's full-sized avatar
-Alex Vainshtein ] (https://github.com/FreesoulApps)
+This project is a modified fork of <https://github.com/FreesoulApps/PreviewAndroid.git> project by [Alex Vainshtein](https://github.com/FreesoulApps)
