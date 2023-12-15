@@ -342,6 +342,7 @@ public class Preview extends RelativeLayout {
                                                     int h = resource.getHeight();
                                                     if (w > h) {
                                                         previewLayout.setOrientation(LinearLayout.VERTICAL);
+                                                        imgIframeSwitcher.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                                                         mImgViewImage.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                                                         LinearLayout linearLayout = findViewById(R.id.text_linear_layout);
                                                         linearLayout.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -350,7 +351,8 @@ public class Preview extends RelativeLayout {
                                                     }
                                                     else {
                                                         previewLayout.setOrientation(LinearLayout.HORIZONTAL);
-                                                        mImgViewImage.getLayoutParams().height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 110, getResources().getDisplayMetrics());
+                                                        imgIframeSwitcher.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
+                                                        mImgViewImage.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
                                                         mImgViewImage.requestLayout();
                                                         mImgViewImage.setScaleType(ImageView.ScaleType.FIT_XY);
                                                     }
