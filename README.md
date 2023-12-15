@@ -79,11 +79,11 @@ linkPreview.setOnClickListener(new PreviewListener{
 })
 ```
 
-The library also uses youtube iframe API to play youtube videos in app. The auto play flag is set to off in the embedded youtube player. If for any reason the iframe isn't shown by the system webview, then the library defaults to the normal preview using youtube video cover photo.
+The library also uses youtube iframe API to play youtube videos in app. The auto play flag is set to off in the embedded youtube player. If for any reason the iframe isn't shown by the system webview, then the library defaults to the normal preview using youtube video cover photo.  
 For more instructions check <https://learnfromvictor.netlify.app/blog/how-to-create-rich-previews-for-website-links-in-your-android-app/>
 
 ### Credits
-This project is a modified fork of <https://github.com/FreesoulApps/PreviewAndroid.git> project by [Alex Vainshtein](https://github.com/FreesoulApps)
-First link: <https://learnfromvictor.netlify.app/>
-Second link: <https://learnfromvictor.netlify.app/blog/why-git-should-be-the-first-thing-a-developer-learns-and-not-code/>
+This project is a modified fork of <https://github.com/FreesoulApps/PreviewAndroid.git> project by [Alex Vainshtein](https://github.com/FreesoulApps)  
+First link: <https://learnfromvictor.netlify.app/>  
+Second link: <https://learnfromvictor.netlify.app/blog/why-git-should-be-the-first-thing-a-developer-learns-and-not-code/>  
 Demo youtube video: <https://youtu.be/WaE4townngA>
