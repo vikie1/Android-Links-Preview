@@ -1,11 +1,12 @@
 # Android-Links-Preview
 ## Introduction
-This is a library meant for providing rich previews for links in an android application. The library uses the java and xml views ecosystem. It utilises material3 cards which means that the preview backgrounds changes depending on the system light or dark themes and is also compatible with adaptive theming from android 12 and above.
-![Dark theme screensot 1](images/1.png)
-![Dark theme screenshot 2](images/2.png)
-![Light theme screenshot 1](images/3.png)
-![Light theme screenshot 2](images/4.png)
-![Youtube player in action](images/5.png)
+This is a library meant for providing rich previews for links in an android application. The library uses the java and xml views ecosystem. It utilises material3 cards which means that the preview backgrounds changes depending on the system light or dark themes and is also compatible with adaptive theming from android 12 and above.  
+<img src="images/1.png" height="350">
+<img src="images/2.png" height="350">
+<img src="images/3.png" height="350">
+<img src="images/4.png" height="350">
+<img src="images/5.png" height="350">
+
 The card to be used is determined automatically by the library.
 ## Installation
 Add jitpack package repository to you project by adding the following under repositories in dependency resolution management in settings.gradle.kts
